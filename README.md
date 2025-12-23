@@ -40,9 +40,13 @@ Explanation:
 2) Provides a complete view of each booking.
 
 EXISTS Query:
+
 select * from vehicles
+
 where not exists ( select bookings.booking_id from bookings where bookings.vehicle_id = vehicles.vehicle_id)
+
 Explanation:
+
 1) Using NOT EXISTS to check for vehicles without bookings.
 
 WHERE Clause Query
